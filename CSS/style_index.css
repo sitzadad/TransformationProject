@@ -1,0 +1,77 @@
+/* *{
+  border:1px solid red;
+} */
+body{
+  margin:0;
+  background-color:#636267;
+}
+section{
+  float:left;
+  color:#dde0f7;
+  top:5em;
+  left:5em;
+  margin-top:3em;
+  margin-left:12em;
+  padding:1em;
+  border:4px solid #dde0f7;
+  border-radius:3%;
+  width:40%;
+  background-color:#374faf;
+}
+#image{
+  width:200px;
+  height:200px;
+  float:left;
+  background-image:url("http://www.fillmurray.com/200/200");
+}
+section H1{
+  margin:0.5em 0em 0em .4em;
+  float:left;
+  font-size:4em;
+}
+#ul1{
+  display:block;
+  float:left;
+  margin:0;
+  padding-left:1.8em;
+}
+li{
+  line-height:1.2em;
+}
+a{
+  text-decoration:none;
+  color:#dde0f7;
+  transition:all 0.2s ease-in;
+}
+#ul2{
+  float:left;
+  list-style-type:none;
+  font-size:1.3em;
+}
+#ul1 li, #ul2 li{
+  margin-bottom:0.3em;
+}
+ul ul{
+  font-size:initial;
+}
+#ul2>ul, section>ul{
+  list-style-type:none;
+}
+ul ul ul li{
+  margin:0.3em;
+}
+h1>a, #ul2>li{
+  color:#f7c40e;
+}
+#image:hover{
+
+  background-image:("http://www.fillmurray.com/100/200");
+}
+h1>a:hover{
+
+}
+li>a:hover{
+  color:#f7c40e;
+  font-weight:bold;
+  padding-left:0.5em;
+}
