@@ -17,29 +17,67 @@ section{
   border-radius:3%;
   width:48%;
   background-color:#374faf;
-  transition: all 1s linear;
+  transition: all 3s ease;
 }
-#image1{
+section:hover{
+  border-radius:100%;
+}
+#imageBottom{
   position:relative;
   width:200px;
   height:200px;
   float:left;
   margin-left:3em;
-   background-image:url("http://www.fillmurray.com/200/200");
+  transition: all 3s ease;
+  border-radius:100%; background-image:url("http://www.fillmurray.com/200/200");
 }
-#image2{
+#imageBottom:hover{
+  transform:rotate(360deg);
+  opacity:1;
+}
+#imageTop{
   position:absolute;
   top:0;
   bottom:0;
   left:0;
   right:0;
-  background-image:url("http://www.fillmurray.com/300/300");
-  transition: all 2s linear;
+  transition: all 3s ease;
+  border-radius:100%; background-image:url("http://www.fillmurray.com/250/250");
 }
-section h1{
+#imageTop:hover{
+  opacity:0;
+  transform:rotate(360deg);
+}
+h1{
   margin:0.5em 0em 0em 0.4em;
   float:left;
   font-size:4em;
+}
+h1:hover{
+  -webkit-animation-duration:3s;
+  -webkit-animation-name:vanish;
+  -webkit-animation-timing-function:linear;
+  opacity:0;
+}
+@-webkit-keyframes vanish{
+  0%{
+    opacity:0.8;
+  }
+  25%{
+    opacity:0.6;
+  }
+  50%{
+    opacity:0.4;
+  }
+  75%{
+    opacity:0.2;
+  }
+  100%{
+    opacity:0;
+  }
+}
+h1 a, #ul2>li{
+  color:#f7c40e;
 }
 #ul1{
   display:block;
@@ -49,11 +87,6 @@ section h1{
 }
 li{
   line-height:1.2em;
-}
-a{
-  text-decoration:none;
-  color:#dde0f7;
-  transition:all 0.2s ease-in;
 }
 #ul2{
   float:left;
@@ -72,21 +105,10 @@ ul ul{
 ul ul ul li{
   margin:0.3em;
 }
-h1 a, #ul2>li{
-  color:#f7c40e;
-}
-
-#image2:hover{
-  opacity:0;
-}
-section:hover{
-  border-radius:100%;
-}
-h1:hover{
-  -webkit-animation-duration: 3s;
-  -webkit-animation-name: vanish;
-  -webkit-animation-timing-function:linear;
-  opacity:0;
+a{
+  text-decoration:none;
+  color:#dde0f7;
+  transition:all 0.2s ease-in;
 }
 li>a:hover{
   -webkit-animation-duration: 0.7s;
@@ -96,11 +118,6 @@ li>a:hover{
   font-weight:bold;
   padding-left:0.5em;
   text-decoration:underline;
-}
-#li1:hover{
-  -webkit-animation-duration: 2s;
-  -webkit-animation-name:size;
-  -webkit-animation-timing-function:linear;
 }
 @-webkit-keyframes colorPop{
   0%{
@@ -121,24 +138,12 @@ li>a:hover{
     text-decoration:underline;
   }
 }
-@-webkit-keyframes vanish{
-  0%{
-    opacity:0.8;
-  }
-  25%{
-    opacity:0.6;
-  }
-  50%{
-    opacity:0.4;
-  }
-  75%{
-    opacity:0.2;
-  }
-  100%{
-    opacity:0;
-  }
+#li1:hover{
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name:sizePop;
+  -webkit-animation-timing-function:linear;
 }
-@-webkit-keyframes size{
+@-webkit-keyframes sizePop{
   0%{
     font-size:2em;
   }
